@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>Weather dataset</title>
+    </head>
+    <body>
+        <header>
+            <h1>WEATHER DATASET</h1>
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('admin') }}">Home</a></li>
+                        <li><a href="{{ url_for('about_admin') }}">About</a></li>
+                        <li><a href="{{ url_for('explore_admin') }}">Explore Data</a></li>
+                        <li><a href="{{ url_for('user_details') }}">Users details</a></li>
+                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </header>
+        <br>
+        {% block body %}
+<div class="content">
+    <h2 style="text-align: center">Users present in database</h2>
+    <table class='center'>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.username }}</td>
+                <td>{{ task.email }}</td>
+                <td>{{ task.role }}</td>
+                <td>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                    <br>
+                    <a href="/update_user/{{task.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {%  endblock %}
+        </section>
+    </body>
+</html>

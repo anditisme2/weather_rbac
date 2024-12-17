@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>Weather Dataset</title>
+    </head>
+    <body>
+        <header>
+            <h1>WEATHER DATASET</h1>
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('admin') }}">Home</a></li>
+                        <li><a href="{{ url_for('about', role='admin') }}">About</a></li>
+                        <li><a href="{{ url_for('explore_admin') }}">Explore Data</a></li>
+                        <li><a href="{{ url_for('user_details') }}">User Details</a></li>
+                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </header>
+        <main>
+            <br>
+            <h2>Update User</h2>
+<div class="form">
+    <form action="/update_user/{{ user.id }}" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" value="{{ user.username }}" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" value="{{ user.email }}" required>
+
+        <label for="role">Role:</label>
+        <select name="role" id="role" required>
+            <option value="admin" {% if user.role == 'admin' %}selected{% endif %}>Admin</option>
+            <option value="researcher" {% if user.role == 'researcher' %}selected{% endif %}>Researcher</option>
+            <option value="user" {% if user.role == 'user' %}selected{% endif %}>User</option>
+        </select>
+
+        <button type="submit">Update User</button>
+    </form>
+</div>
+        <footer>
+            <p>&copy; 2024 Weather Dataset App</p>
+        </footer>
+    </body>
+</html>

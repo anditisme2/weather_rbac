@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>Weather dataset</title>
+    </head>
+    <body>
+        <header>
+            <h1>WEATHER DATASET</h1>
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li><a href="{{ url_for('explore') }}">Explore Data</a></li>
+                        <li><a href="{{ url_for('login') }}" class="sign-in">Sign In</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </header>
+        <br>
+        <h2> </h2>
+        <h3>Mini-Project 2024-25</h3>
+        <h4>Role-based access control system for a weather forecasting platform.</h4>
+        <section class="content">
+            <p> This dataset contains weather information of Almora over the years, detailing trends in temperature, rainfall, humidity, and other critical metrics. 
+                It provides a comprehensive overview of climatic changes and helps in understanding patterns that can aid researchers, students, and environmentalists. 
+                The dataset is designed to highlight the importance of preserving natural ecosystems in regions like Almora. 
+
+                This site has been created as part of a semester-long project aiming to implement a role-based authentication system for secure data access in academic environments.
+                Through this project, we demonstrate how technology can facilitate collaborative research and data-driven decision-making.
+            </p>
+        </section>
+    </body>
+</html>

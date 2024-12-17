@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>Weather dataset</title>
+    </head>
+    <body>
+        <header>
+            <h1>WEATHER DATASET</h1>
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('researcher') }}">Home</a></li>
+                        <li><a href="{{ url_for('about_researcher') }}">About</a></li>
+                        <li><a href="{{ url_for('explore_researcher') }}">Explore Data</a></li>
+                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </header>
+        <br>
+        <h2>Welcome, Researcher!!</h2>
+        <h3>You have successfully logged in.</h3>
+        <p>You have access to all the data available on this site</p>
+        </section>
+    </body>
+</html>

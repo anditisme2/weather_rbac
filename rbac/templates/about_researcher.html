@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>Weather dataset</title>
+    </head>
+    <body>
+        <header>
+            <h1>WEATHER DATASET</h1>
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('researcher') }}">Home</a></li>
+                        <li><a href="{{ url_for('about_researcher') }}">About</a></li>
+                        <li><a href="{{ url_for('explore_researcher') }}">Explore Data</a></li>
+                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </header>
+        <br>
+        <section>
+            <h2>Almora</h2>
+            <h3>The "Heart of Kumaon"</h3>
+            <p> Almora (Kumaoni: Almāḍ) is a municipal corporation and a cantonment town in the state of Uttarakhand, India. It is the administrative headquarters of Almora district. Almora is located on a ridge at the southern edge of the Kumaon Hills of the Himalaya range. The Koshi (Kaushiki) and Suyal (Salmale) rivers flow along the city and snow-capped Himalayas can be seen in the background.
+                Almora was founded in 1568 by King Kalyan Chand; however, there are accounts of human settlements in the hills and surrounding region in the Hindu epic Mahabharata (8th and 9th century BCE). Almora was the seat of Chand kings that ruled over the Kumaon Kingdom. It is considered the cultural heart of the Kumaon region of Uttarakhand.
+                According to the provisional results of the 2011 Census of India, Almora had a population of about 179,000.[citation needed] Nestled within higher peaks of the Himalaya, Almora enjoys a year-round mild temperate climate. The town is visited by thousands of tourists annually from all over the world.</p>
+                <br>
+            <p>Some Information:</p> 
+            <div class="content-wrapper">
+                <img src="{{ url_for('static', filename='images/Almora.jpg') }}" alt="Almora Image">
+                <ul>
+                    <li>Area: 3139.00 sq km</li>
+                    <li>Forest Area: 1309.40 sq km</li>
+                    <li>Population: 6,22,506</li>
+                    <li>Literacy Rate: 80.47%</li>
+                    <li>Tehsil: 12</li>
+                    <li>Block: 11</li>
+                </ul>
+            </div>
+        </section>
+    </body>
+</html>
